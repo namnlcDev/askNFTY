@@ -1,0 +1,10 @@
+extends ../layouts/layout
+
+block params
+    - class_body = "index-page"
+    - title_page = "Your Title"
+block css
+    link(rel="stylesheet", href="./assets/css/home.css")
+block main
+    .container
+        a(href="documents.html") Read Me
