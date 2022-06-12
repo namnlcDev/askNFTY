@@ -916,3 +916,12 @@
 		margin-left: 91.666667%;
 	}
 }
+
+.search-page {
+	background: url('../images/hand.png') bottom right no-repeat, 
+		url('../images/cloud.png') left bottom no-repeat, 
+		url('../images/sky.png') center center no-repeat,
+		url('../images/coin.png') left bottom no-repeat,
+		linear-gradient(0deg, #E9A4D3 3.33%, #90DDFD 100%);
+	height: 100vh;
+}

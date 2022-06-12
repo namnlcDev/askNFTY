@@ -1,10 +1,29 @@
-extends ../layouts/layout
+extends ../layouts/layout-search
 
 block params
     - class_body = "index-page"
     - title_page = "Your Title"
 block css
     link(rel="stylesheet", href="./assets/css/home.css")
+block js
+    link(rel="javascript", href="./assets/js/main.js")
 block main
-    .container
-        a(href="documents.html") Read Me
+    .container.home
+        .star-block
+            img(src="../assets/images/star-right.png", alt="star").star-right
+            img(src="../assets/images/star-white-left.png", alt="star").star-white-left
+            img(src="../assets/images/star-green-left.png", alt="star").star-green-left
+        .welcome
+            img(src="../assets/images/welcome.png", alt="welcome")
+        form.search-autocomplete(action="http://34.136.254.86:8080/api/v0/search/no-order/")#search-nft
+            .search-field
+                label(for="text") Find a NFT Collection
+                input(type="text", placeholder="Search by keyword...")
+                i.fas.fa-search.icon-search
+        #loading
+        .content-search
+            .list-item
+        .recent-search
+            .recent-title
+                p.title Recent Searches
+            .list-item

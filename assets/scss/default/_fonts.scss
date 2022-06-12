@@ -42,3 +42,30 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+	font-family: 'Inconsolata SemiExpanded';
+	src: url('../fonts/InconsolataSemiExpanded-Regular.woff2') format('woff2'),
+		url('../fonts/InconsolataSemiExpanded-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inconsolata SemiExpanded';
+	src: url('../fonts/InconsolataSemiExpanded-ExtraBold.woff2') format('woff2'),
+		url('../fonts/InconsolataSemiExpanded-ExtraBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Bungee';
+	src: url('../fonts/Bungee-Regular.woff2') format('woff2'),
+		url('../fonts/Bungee-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

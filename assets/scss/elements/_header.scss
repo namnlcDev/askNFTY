@@ -1,2 +1,38 @@
 header {
+    height: 72px;
+    background-color: #E698CD;
+
+    .wrap-header {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 2.7777%;
+        padding-right: 2.77777%;
+
+        .wrap-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            a {
+                color: map-get($map: $theme-colors, $key: 'txt-body');
+                font-size: 20px;
+                line-height: 22px;
+
+                &:nth-child(2) {
+                    padding-left: 32px;
+                    padding-right: 32px;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                width: 64px;
+                height: 1px;
+            }
+        }
+    }
 }

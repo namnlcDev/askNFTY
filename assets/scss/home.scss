@@ -1,3 +1,204 @@
-h1 {
-    color: red;
+@import "./default/varivables.scss";
+
+.home {
+    .star-block {
+        position: relative;
+        top: 0;
+
+        .star-right,
+        .star-white-left,
+        .star-green-left {
+            position: absolute;
+            content: '';
+        }
+
+        .star-right {
+            top: 120px;
+            right: 6.1%;
+        }
+
+        .star-white-left {
+            top: 78.37px;
+            left: 22.8%;
+        }
+
+        .star-green-left {
+            top: 157px;
+            left: 7.6%;
+        }
+    }
+
+    .welcome {
+        text-align: center;
+        padding-top: 148px;
+    }
+
+    .search-autocomplete {
+        max-width: 640px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 64px;
+
+        .search-field {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+
+            label {
+                margin-bottom: 24px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 42.2px;
+                color: map-get($map: $theme-colors, $key: 'label-input');
+            }
+
+            input {
+                padding: 17px 0 17px 20px;
+                border: 2px solid #F205D7;
+            }
+
+            .icon-search {
+                position: absolute;
+                bottom: 10%;
+                right: 20px;
+                transform: translateY(-10%);
+                color: #8E8E8E;
+                font-size: 28px;
+            }
+        }
+    }
+
+    .content-search,
+    .recent-search {
+        margin: 0 auto;
+        max-width: 1012px;
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 40px;
+
+            .item-nft {
+                flex: 0 0 25%;
+                max-width: 25%;
+                margin-bottom: 30px;
+
+                .item-img {
+                    position: relative;
+                    overflow: hidden;
+                    // padding-bottom: calc(220 / 180 * 100%);
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                    }
+
+                    img {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        height: 180px;
+                        object-fit: cover;
+                        transition: 0.3s all ease-in-out;
+                        filter: blur(0)
+                    }
+                }
+
+                .hover {
+                    figure {
+                        img {
+                            -webkit-transform: scale(1.1);
+                            transform: scale(1.1);
+                            -webkit-transition: .3s ease-in-out;
+                            transition: .3s ease-in-out;
+                        }
+
+                        &:hover {
+                            img {
+                                -webkit-transform: scale(1);
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+
+                .item-title {
+                    .title {
+                        font-size: 20px;
+                        line-height: 22px;
+                        font-weight: 700;
+                        color: #292929;
+                        padding-top: 12px;
+                        padding-bottom: 4px;
+                        max-width: 200px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .sub-title {
+                        color: #545454;
+                    }
+                }
+            }
+
+            .page-not-found {
+                margin: 0 auto;
+
+                .content {
+                    text-align: center;
+
+                    p {
+                        margin-top: 24px;
+                        color: #292929;
+                        font-size: 20px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    .recent-search {
+        .title {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 700;
+            color: #292929;
+        }
+    }
+
+    #loading {
+        width: 2rem;
+        height: 2rem;
+        border: 5px solid #f3f3f3;
+        border-top: 6px solid #F205D7;
+        border-radius: 100%;
+        margin: auto;
+        visibility: hidden;
+        animation: spin 1s infinite linear;
+        margin-top: 40px;
+
+        &.display {
+            visibility: visible;
+        }
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
 }

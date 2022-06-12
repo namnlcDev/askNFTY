@@ -1,14 +1,14 @@
 :root {
   --color-primary: #8200ff;
   --color-secondary: #e90cb2;
-  --color-txt-body: #202121;
+  --color-txt-body: #ffffff;
   --color-background-1: #f4f7f6;
   --color-border: #e9e7ee;
   --color-success: #09c253;
   --color-info: #1470eb;
   --color-warning: #f9b506;
   --color-error: #da0b0b;
-  --font-body: Varta;
+  --font-body: Inconsolata SemiExpanded;
   --font-icons: Font Awesome 5 Pro;
 }
 
@@ -18,11 +18,11 @@
 }
 
 .txt-body {
-  color: #202121;
+  color: #ffffff;
 }
 
 .txt-body:hover {
-  color: #6b6f6f;
+  color: white;
 }
 
 .txt-light {
@@ -1101,6 +1101,11 @@
   }
 }
 
+.search-page {
+  background: url("../images/hand.png") bottom right no-repeat, url("../images/cloud.png") left bottom no-repeat, url("../images/sky.png") center center no-repeat, url("../images/coin.png") left bottom no-repeat, linear-gradient(0deg, #E9A4D3 3.33%, #90DDFD 100%);
+  height: 100vh;
+}
+
 *,
 *::before,
 *::after {
@@ -1109,10 +1114,10 @@
 
 body {
   margin: 0;
-  font-family: "Varta";
+  font-family: "Inconsolata SemiExpanded";
   font-size: 1rem;
   font-weight: 400;
-  color: #202121;
+  color: #ffffff;
   background-color: #f4f7f6;
   overflow-x: hidden;
 }
@@ -1456,6 +1461,30 @@ progress {
   font-family: "Varta";
   src: url("../fonts/Varta-Medium.woff2") format("woff2"), url("../fonts/Varta-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inconsolata SemiExpanded';
+  src: url("../fonts/InconsolataSemiExpanded-Regular.woff2") format("woff2"), url("../fonts/InconsolataSemiExpanded-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inconsolata SemiExpanded';
+  src: url("../fonts/InconsolataSemiExpanded-ExtraBold.woff2") format("woff2"), url("../fonts/InconsolataSemiExpanded-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bungee';
+  src: url("../fonts/Bungee-Regular.woff2") format("woff2"), url("../fonts/Bungee-Regular.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -17397,7 +17426,7 @@ progress {
   line-height: 1;
   min-height: 48px;
   border-radius: 0.5rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .btn-sm {
@@ -17919,6 +17948,45 @@ progress {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
+}
+
+header {
+  height: 72px;
+  background-color: #E698CD;
+}
+
+header .wrap-header {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2.7777%;
+  padding-right: 2.77777%;
+}
+
+header .wrap-header .wrap-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+header .wrap-header .wrap-menu a {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+header .wrap-header .wrap-menu a:nth-child(2) {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+header .wrap-header .wrap-menu:before {
+  position: absolute;
+  content: '';
+  width: 64px;
+  height: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
